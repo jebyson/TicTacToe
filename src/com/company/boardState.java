@@ -158,5 +158,11 @@ public class boardState {
         }
     }
 
-    
+
+    /*
+    if(test == true)
+        {
+            break;
+        }
+     */
 }
