@@ -210,13 +210,24 @@ public class boardState {
         boolean j = (board[1][0].equals(board[1][1]) || board[1][1].equals(board[1][2]) || board[1][0].equals(board[1][2])) &&
                     ((board[1][0].equals(userChar) && board[1][1].equals(userChar)) || (board[1][0].equals(CPUChar) && board[1][1].equals(CPUChar)) ||
                     (board[1][1].equals(userChar) && board[1][2].equals(userChar)) || (board[1][1].equals(CPUChar) && board[1][2].equals(CPUChar)) ||
-                    (board[1][0].equals(userChar) && board[1][2].equals(userChar)) || (board[1][0].equals(CPUChar) && board[1][2].equals(CPUChar)));;
+                    (board[1][0].equals(userChar) && board[1][2].equals(userChar)) || (board[1][0].equals(CPUChar) && board[1][2].equals(CPUChar)));
         boolean k = (board[2][0].equals(board[2][1]) || board[2][1].equals(board[2][2]) || board[2][0].equals(board[2][2])) &&
-                    ;
-        boolean l = (board[0][0].equals(board[1][0]) && board[1][0].equals(board[2][0])) && (board[0][0].equals(" O ") || board[0][0].equals(" X "));
-        boolean m = (board[0][1].equals(board[1][1]) && board[1][1].equals(board[2][1])) && (board[0][1].equals(" O ") || board[0][1].equals(" X "));
-        boolean n = (board[0][2].equals(board[1][2]) && board[1][2].equals(board[2][2])) && (board[0][2].equals(" O ") || board[0][2].equals(" X "));
-        boolean o = (board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])) && (board[0][0].equals(" O ") || board[0][0].equals(" X "));
-        boolean p = (board[0][2].equals(board[1][1]) && board[2][0].equals(board[0][2])) && (board[0][2].equals(" O ") || board[0][2].equals(" X "));
+                    ((board[2][0].equals(userChar) && board[2][1].equals(userChar)) || (board[2][0].equals(CPUChar) && board[2][1].equals(CPUChar)) ||
+                    (board[2][1].equals(userChar) && board[2][2].equals(userChar)) || (board[2][1].equals(CPUChar) && board[2][2].equals(CPUChar)) ||
+                    (board[2][0].equals(userChar) && board[2][2].equals(userChar)) || (board[2][0].equals(CPUChar) && board[2][2].equals(CPUChar)));
+        boolean l = (board[0][0].equals(board[1][0]) || board[1][0].equals(board[2][0]) || board[0][0].equals(board[2][0])) &&
+                    ((board[0][0].equals(userChar) && board[1][0].equals(userChar)) || (board[0][0].equals(CPUChar) && board[1][0].equals(CPUChar)) ||
+                    (board[1][0].equals(userChar) && board[2][0].equals(userChar)) || (board[1][0].equals(CPUChar) && board[2][0].equals(CPUChar)) ||
+                    (board[0][0].equals(userChar) && board[2][0].equals(userChar)) || (board[0][0].equals(CPUChar) && board[2][0].equals(CPUChar)));;
+        boolean m = (board[0][1].equals(board[1][1]) || board[1][1].equals(board[2][1]) || board[0][1].equals(board[2][1])) &&
+                    ((board[0][1].equals(userChar) && board[1][1].equals(userChar)) || (board[0][1].equals(CPUChar) && board[1][1].equals(CPUChar)) ||
+                    (board[1][1].equals(userChar) && board[2][1].equals(userChar)) || (board[1][1].equals(CPUChar) && board[2][1].equals(CPUChar)) ||
+                    (board[0][1].equals(userChar) && board[2][1].equals(userChar)) || (board[0][1].equals(CPUChar) && board[2][1].equals(CPUChar)));
+        boolean n = (board[0][2].equals(board[1][2]) || board[1][2].equals(board[2][2]) || board[0][2].equals(board[2][2])) &&
+                    ((board[0][0].equals(userChar) && board[0][1].equals(userChar)) || (board[0][0].equals(CPUChar) && board[0][1].equals(CPUChar)) ||          //FIX THIS
+                    (board[0][1].equals(userChar) && board[0][2].equals(userChar)) || (board[0][1].equals(CPUChar) && board[0][2].equals(CPUChar)) ||
+                    (board[0][0].equals(userChar) && board[0][2].equals(userChar)) || (board[0][0].equals(CPUChar) && board[0][2].equals(CPUChar)));;
+        boolean o = (board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])) && (board[0][0].equals(" O ") || board[0][0].equals(" X "));           //FIX THIS
+        boolean p = (board[0][2].equals(board[1][1]) && board[2][0].equals(board[0][2])) && (board[0][2].equals(" O ") || board[0][2].equals(" X "));           //FIX THIS
     }
 }
