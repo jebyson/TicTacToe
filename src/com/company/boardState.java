@@ -13,8 +13,6 @@ public class boardState {
     public static int xCoord = -1;
     public static int yCoord = -1;
 
-
-
     public boardState()
     {
         board = new String [3][3];
@@ -28,79 +26,124 @@ public class boardState {
     }
 
     public static void CPUFirst() {
-        while(test == false) {
+        while(!test) {
             System.out.println("The top left of the board is (0,0). The bottom right of the board is (2, 2)");
 
             if (board[0][0].equals(unchanged))
             {
                 board[0][0] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             else if (board[0][1].equals(unchanged))
             {
                 board[0][1] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
-                userMove();
-            }
-            else if (board[1][0].equals(unchanged))
-            {
-                board[1][0] = CPUChar;
-                System.out.println("The CPU's move:");
-                printBoard();
-                testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             else if (board[0][2].equals(unchanged))
             {
                 board[0][2] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
+                if(test)
+                {
+                    break;
+                }
+                userMove();
+            }
+            else if (board[1][0].equals(unchanged))
+            {
+                board[1][0] = CPUChar;
+                System.out.println("The CPU's move:");
+
+                printBoard();
+                testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             else if (board[2][0].equals(unchanged))
             {
                 board[2][0] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             else if (board[1][1].equals(unchanged))
             {
                 board[1][1] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
-                userMove();
-            }
-            else if (board[2][2].equals(unchanged))
-            {
-                board[2][2] = CPUChar;
-                System.out.println("The CPU's move:");
-                printBoard();
-                testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             else if (board[2][1].equals(unchanged))
             {
                 board[2][1] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             else if (board[1][2].equals(unchanged))
             {
                 board[1][2] = CPUChar;
                 System.out.println("The CPU's move:");
+
                 printBoard();
                 testWin();
+                if(test)
+                {
+                    break;
+                }
+                userMove();
+            }
+            else if (board[2][2].equals(unchanged))
+            {
+                board[2][2] = CPUChar;
+                System.out.println("The CPU's move:");
+
+                printBoard();
+                testWin();
+                if(test)
+                {
+                    break;
+                }
                 userMove();
             }
             testWin();
@@ -158,11 +201,22 @@ public class boardState {
         }
     }
 
-
-    /*
-    if(test == true)
-        {
-            break;
-        }
-     */
+    public static void blockWin()
+    {
+        boolean i = (board[0][0].equals(board[0][1]) || board[0][1].equals(board[0][2]) || board[0][0].equals(board[0][2])) &&
+                    ((board[0][0].equals(userChar) && board[0][1].equals(userChar)) || (board[0][0].equals(CPUChar) && board[0][1].equals(CPUChar)) ||
+                    (board[0][1].equals(userChar) && board[0][2].equals(userChar)) || (board[0][1].equals(CPUChar) && board[0][2].equals(CPUChar)) ||
+                    (board[0][0].equals(userChar) && board[0][2].equals(userChar)) || (board[0][0].equals(CPUChar) && board[0][2].equals(CPUChar)));
+        boolean j = (board[1][0].equals(board[1][1]) || board[1][1].equals(board[1][2]) || board[1][0].equals(board[1][2])) &&
+                    ((board[1][0].equals(userChar) && board[1][1].equals(userChar)) || (board[1][0].equals(CPUChar) && board[1][1].equals(CPUChar)) ||
+                    (board[1][1].equals(userChar) && board[1][2].equals(userChar)) || (board[1][1].equals(CPUChar) && board[1][2].equals(CPUChar)) ||
+                    (board[1][0].equals(userChar) && board[1][2].equals(userChar)) || (board[1][0].equals(CPUChar) && board[1][2].equals(CPUChar)));;
+        boolean k = (board[2][0].equals(board[2][1]) || board[2][1].equals(board[2][2]) || board[2][0].equals(board[2][2])) &&
+                    ;
+        boolean l = (board[0][0].equals(board[1][0]) && board[1][0].equals(board[2][0])) && (board[0][0].equals(" O ") || board[0][0].equals(" X "));
+        boolean m = (board[0][1].equals(board[1][1]) && board[1][1].equals(board[2][1])) && (board[0][1].equals(" O ") || board[0][1].equals(" X "));
+        boolean n = (board[0][2].equals(board[1][2]) && board[1][2].equals(board[2][2])) && (board[0][2].equals(" O ") || board[0][2].equals(" X "));
+        boolean o = (board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])) && (board[0][0].equals(" O ") || board[0][0].equals(" X "));
+        boolean p = (board[0][2].equals(board[1][1]) && board[2][0].equals(board[0][2])) && (board[0][2].equals(" O ") || board[0][2].equals(" X "));
+    }
 }

@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("This is the Tic Tac Toe board:");
 
-        boardState testing = new boardState();
+        new boardState();
 
-        testing.printBoard();
+        boardState.printBoard();
         Scanner input = new Scanner(System.in);
         System.out.println("\nEnter '0' if you want to start. Enter '1' if you want the CPU to start.");
         int whoGoesFirst = input.nextInt();
@@ -17,12 +17,12 @@ public class Main {
         if(whoGoesFirst == 0)
         {
             System.out.println("Too bad, the CPU is going first!");
-            testing.CPUFirst();
+            boardState.CPUFirst();
         }
         else if(whoGoesFirst == 1)
         {
             System.out.println("The CPU will go first!");
-            testing.CPUFirst();
+            boardState.CPUFirst();
         }
         else
         {
