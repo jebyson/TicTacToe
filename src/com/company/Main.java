@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.*;
+
 import static com.company.boardState.*;
 
 public class Main {
