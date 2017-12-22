@@ -28,6 +28,7 @@ public class Main {
             }
             else {
                 System.out.println("Sorry, that is an invalid input. Goodbye.");
+                break;
             }
 
             System.out.println("\nIf you would like to play again, enter '0'.");
