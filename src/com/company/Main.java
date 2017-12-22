@@ -31,9 +31,9 @@ public class Main {
             }
 
             System.out.println("\nIf you would like to play again, enter '0'.");
-            int playAgain = input.nextInt();
+            String playAgain = input.next();
 
-            if(playAgain != 0)
+            if(!(playAgain.equals("0")))
             {
                 System.out.println("Goodbye!");
                 break;
