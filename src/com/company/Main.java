@@ -19,11 +19,7 @@ public class Main {
         if(whoGoesFirst == 0)
         {
             System.out.println("Too bad, the CPU is going first!");
-
             CPUFirst();
-
-            boardState.CPUFirst();
-
         }
         else if(whoGoesFirst == 1)
         {
