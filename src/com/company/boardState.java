@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-public class boardState {
+class boardState {
     private static String[][] board;
     private static Scanner input = new Scanner(System.in);
     private static boolean test = false;
@@ -14,7 +14,7 @@ public class boardState {
     private static int yCoord = -1;
     private static int cnt = 0;
 
-    public boardState()
+    boardState()
     {
         board = new String[3][3];
         for (int i = 0; i < board.length; i++)
@@ -26,11 +26,11 @@ public class boardState {
         }
     }
 
-    public static void CPUFirst()
+    static void CPUFirst()
     {
         while(!test)
         {
-            System.out.println("The top left of the board is (0,0). The bottom right of the board is (2, 2)");
+            System.out.println("The top left of the board is (0, 0). The bottom right of the board is (2, 2)");
 
             if(board[0][0].equals(unchanged))
             {
@@ -277,7 +277,7 @@ public class boardState {
         }
     }
 
-    public static void printBoard()
+    static void printBoard()
     {
         for (int i = 0; i < boardState.board.length; i++)
         {
@@ -306,7 +306,7 @@ public class boardState {
         }
         else
         {
-            System.out.println("Invalid move. Goodbye.");
+            System.out.println("Invalid move. The CPU receives a free move now!");
         }
     }
 
@@ -322,7 +322,7 @@ public class boardState {
 
         if (a || b || c || d || e || f || g || h) {
             test = true;
-            System.out.println("Game over! Thank for playing!");
+            System.out.println("Game over! Thanks for playing!");
         }
     }
 
@@ -465,12 +465,9 @@ public class boardState {
     private static void checkTie()
     {
         cnt = 0;
-        for(int a = 0; a < board.length; a++)
-        {
-            for(int b = 0; b < board[0].length; b++)
-            {
-                if(!(board[a][b].equals(unchanged)))
-                {
+        for (String[] dummyVar : board) {
+            for (int b = 0; b < board[0].length; b++) {
+                if (!(dummyVar[b].equals(unchanged))) {
                     cnt++;
                 }
             }
