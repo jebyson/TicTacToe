@@ -31,12 +31,17 @@ public class Main {
                 break;
             }
 
-            System.out.println("\nIf you would like to play again, enter '0'. Enter anything else to quit.");
-            String playAgain = input.next();
+            System.out.println("\nIf you would like to play again, enter '0'. If you would like to quit, enter '1'.");
+            int playAgain = input.nextInt();
 
-            if(!(playAgain.equals("0")))
+            if(playAgain == 1)
             {
                 System.out.println("Goodbye!");
+                break;
+            }
+            else if(playAgain != 0)
+            {
+                System.out.println("Sorry, that is an invalid input. Goodbye.");
                 break;
             }
         }
