@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.*;
+
 class boardState {
     private static String[][] board;
     private static Scanner input = new Scanner(System.in);
