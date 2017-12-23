@@ -34,15 +34,18 @@ public class Main {
             System.out.println("\nIf you would like to play again, enter '0'. If you would like to quit, enter '1'.");
             int playAgain = input.nextInt();
 
-            if(playAgain == 1)
+            if(playAgain == 0)
             {
-                System.out.println("Goodbye!");
+                System.out.println("Thanks for playing again!\n");
+            }
+            else if(playAgain == 1)
+            {
+                System.out.println("Thanks for playing. Goodbye.");
                 break;
             }
-            else if(playAgain != 0)
+            else
             {
                 System.out.println("Sorry, that is an invalid input. Goodbye.");
-                break;
             }
         }
     }
