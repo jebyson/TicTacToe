@@ -36,7 +36,7 @@ class boardState {
             {
                 xCoord = 0;
                 yCoord = 0;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -63,7 +63,7 @@ class boardState {
             {
                 xCoord = 0;
                 yCoord = 1;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -90,7 +90,7 @@ class boardState {
             {
                 xCoord = 0;
                 yCoord = 2;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -117,7 +117,7 @@ class boardState {
             {
                 xCoord = 1;
                 yCoord = 0;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -144,7 +144,7 @@ class boardState {
             {
                 xCoord = 2;
                 yCoord = 0;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -170,7 +170,7 @@ class boardState {
             {
                 xCoord = 1;
                 yCoord = 1;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -197,7 +197,7 @@ class boardState {
             {
                 xCoord = 2;
                 yCoord = 1;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -224,7 +224,7 @@ class boardState {
             {
                 xCoord = 1;
                 yCoord = 2;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -251,7 +251,7 @@ class boardState {
             {
                 xCoord = 2;
                 yCoord = 2;
-                blockWin();
+                winNow();
                 System.out.println("The CPU's move:");
 
                 printBoard();
@@ -471,6 +471,142 @@ class boardState {
                     cnt++;
                 }
             }
+        }
+    }
+
+    private static void winNow()
+    {
+        boolean aaa = board[0][0].equals(CPUChar) && board[0][1].equals(CPUChar) && board[0][2].equals(unchanged);//1a
+        boolean bbb = board[0][0].equals(CPUChar) && board[0][2].equals(CPUChar) && board[0][1].equals(unchanged);//2b
+        boolean ccc = board[0][1].equals(CPUChar) && board[0][2].equals(CPUChar) && board[0][0].equals(unchanged);//3c
+
+        boolean ddd = board[1][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[1][2].equals(unchanged);//4d
+        boolean eee = board[1][0].equals(CPUChar) && board[1][2].equals(CPUChar) && board[1][1].equals(unchanged);//5e
+        boolean fff = board[1][1].equals(CPUChar) && board[1][2].equals(CPUChar) && board[1][0].equals(unchanged);//6f
+
+        boolean ggg = board[2][0].equals(CPUChar) && board[2][1].equals(CPUChar) && board[2][2].equals(unchanged);//7g
+        boolean hhh = board[2][0].equals(CPUChar) && board[2][2].equals(CPUChar) && board[2][1].equals(unchanged);//8h
+        boolean iii = board[2][1].equals(CPUChar) && board[2][2].equals(CPUChar) && board[2][0].equals(unchanged);//9i
+
+        boolean jjj = board[0][0].equals(CPUChar) && board[1][0].equals(CPUChar) && board[2][0].equals(unchanged);//10j
+        boolean kkk = board[0][0].equals(CPUChar) && board[2][0].equals(CPUChar) && board[1][0].equals(unchanged);//11k
+        boolean lll = board[1][0].equals(CPUChar) && board[2][0].equals(CPUChar) && board[0][0].equals(unchanged);//12l
+
+        boolean mmm = board[0][1].equals(CPUChar) && board[1][1].equals(CPUChar) && board[2][1].equals(unchanged);//13m
+        boolean nnn = board[0][1].equals(CPUChar) && board[2][1].equals(CPUChar) && board[1][1].equals(unchanged);//14n
+        boolean ooo = board[1][1].equals(CPUChar) && board[2][1].equals(CPUChar) && board[0][1].equals(unchanged);//15o
+
+        boolean ppp = board[0][2].equals(CPUChar) && board[1][2].equals(CPUChar) && board[2][2].equals(unchanged);//16p
+        boolean qqq = board[0][2].equals(CPUChar) && board[2][2].equals(CPUChar) && board[1][2].equals(unchanged);//17q
+        boolean rrr = board[1][2].equals(CPUChar) && board[2][2].equals(CPUChar) && board[0][2].equals(unchanged);//18r
+
+        boolean sss = board[0][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[2][2].equals(unchanged);//19
+        boolean ttt = board[0][0].equals(CPUChar) && board[2][2].equals(CPUChar) && board[1][1].equals(unchanged);//20
+        boolean uuu = board[1][1].equals(CPUChar) && board[2][2].equals(CPUChar) && board[0][0].equals(unchanged);//21
+
+        boolean vvv = board[2][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[0][2].equals(unchanged);//22
+        boolean www = board[2][0].equals(CPUChar) && board[0][2].equals(CPUChar) && board[1][1].equals(unchanged);//23
+        boolean xxx = board[1][1].equals(CPUChar) && board[0][2].equals(CPUChar) && board[2][0].equals(unchanged);//24
+
+        if(aaa)
+        {
+            board[0][2] = CPUChar;
+        }
+        else if(bbb)
+        {
+            board[0][1] = CPUChar;
+        }
+        else if(ccc)
+        {
+            board[0][0] = CPUChar;
+        }
+        else if(ddd)
+        {
+            board[1][2] = CPUChar;
+        }
+        else if(eee)
+        {
+            board[1][1] = CPUChar;
+        }
+        else if(fff)
+        {
+            board[1][0] = CPUChar;
+        }
+        else if(ggg)
+        {
+            board[2][2] = CPUChar;
+        }
+        else if(hhh)
+        {
+            board[2][1] = CPUChar;
+        }
+        else if(iii)
+        {
+            board[2][0] = CPUChar;
+        }
+        else if(jjj)
+        {
+            board[2][0] = CPUChar;
+        }
+        else if(kkk)
+        {
+            board[1][0] = CPUChar;
+        }
+        else if(lll)
+        {
+            board[0][0] = CPUChar;
+        }
+        else if(mmm)
+        {
+            board[2][1] = CPUChar;
+        }
+        else if(nnn)
+        {
+            board[1][1] = CPUChar;
+        }
+        else if(ooo)
+        {
+            board[0][1] = CPUChar;
+        }
+        else if(ppp)
+        {
+            board[2][2] = CPUChar;
+        }
+        else if(qqq)
+        {
+            board[1][2] = CPUChar;
+        }
+        else if(rrr)
+        {
+            board[0][2] = CPUChar;
+        }
+        else if(sss)
+        {
+            board[2][2] = CPUChar;
+        }
+        else if(ttt)
+        {
+            board[1][1] = CPUChar;
+        }
+        else if(uuu)
+        {
+            board[0][0] = CPUChar;
+        }
+        else if(vvv)
+        {
+            board[0][2] = CPUChar;
+        }
+        else if(www)
+        {
+            board[1][1] = CPUChar;
+        }
+        else if(xxx)
+        {
+            board[2][0] = CPUChar;
+        }
+        else
+        {
+            blockWin();
         }
     }
 }
