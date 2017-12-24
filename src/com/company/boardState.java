@@ -14,7 +14,7 @@ class boardState {
     private static int ySpot = -1;
     private static int cnt = 0;
 
-    boardState()
+    public boardState()
     {
         board = new String[3][3];
         for (int i = 0; i < board.length; i++)
@@ -26,7 +26,7 @@ class boardState {
         }
     }
 
-    static void CPUFirst()
+    public static void CPUFirst()
     {
         while(!test)
         {
@@ -277,7 +277,7 @@ class boardState {
         }
     }
 
-    static void printBoard()
+    public static void printBoard()
     {
         for (int i = 0; i < boardState.board.length; i++)
         {
