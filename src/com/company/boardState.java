@@ -10,8 +10,8 @@ class boardState {
     private static String userChar = " O ";
     private static String CPUChar = " X ";
     private static String unchanged = " - ";
-    private static int xCoord = -1;
-    private static int yCoord = -1;
+    private static int xSpot = -1;
+    private static int ySpot = -1;
     private static int cnt = 0;
 
     boardState()
@@ -34,8 +34,8 @@ class boardState {
 
             if(board[0][0].equals(unchanged))
             {
-                xCoord = 0;
-                yCoord = 0;
+                xSpot = 0;
+                ySpot = 0;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -61,8 +61,8 @@ class boardState {
             }
             else if (board[0][1].equals(unchanged))
             {
-                xCoord = 0;
-                yCoord = 1;
+                xSpot = 0;
+                ySpot = 1;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -88,8 +88,8 @@ class boardState {
             }
             else if (board[0][2].equals(unchanged))
             {
-                xCoord = 0;
-                yCoord = 2;
+                xSpot = 0;
+                ySpot = 2;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -115,8 +115,8 @@ class boardState {
             }
             else if (board[1][0].equals(unchanged))
             {
-                xCoord = 1;
-                yCoord = 0;
+                xSpot = 1;
+                ySpot = 0;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -142,8 +142,8 @@ class boardState {
             }
             else if (board[2][0].equals(unchanged))
             {
-                xCoord = 2;
-                yCoord = 0;
+                xSpot = 2;
+                ySpot = 0;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -168,8 +168,8 @@ class boardState {
             }
             else if (board[1][1].equals(unchanged))
             {
-                xCoord = 1;
-                yCoord = 1;
+                xSpot = 1;
+                ySpot = 1;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -195,8 +195,8 @@ class boardState {
             }
             else if (board[2][1].equals(unchanged))
             {
-                xCoord = 2;
-                yCoord = 1;
+                xSpot = 2;
+                ySpot = 1;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -222,8 +222,8 @@ class boardState {
             }
             else if (board[1][2].equals(unchanged))
             {
-                xCoord = 1;
-                yCoord = 2;
+                xSpot = 1;
+                ySpot = 2;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -249,8 +249,8 @@ class boardState {
             }
             else if (board[2][2].equals(unchanged))
             {
-                xCoord = 2;
-                yCoord = 2;
+                xSpot = 2;
+                ySpot = 2;
                 winNow();
                 System.out.println("The CPU's move:");
 
@@ -458,7 +458,7 @@ class boardState {
         }
         else
         {
-            board[xCoord][yCoord] = CPUChar;
+            board[xSpot][ySpot] = CPUChar;
         }
     }
 
