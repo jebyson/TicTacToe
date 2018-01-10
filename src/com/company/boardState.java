@@ -14,6 +14,7 @@ class boardState {
     private static int ySpot = -1;
     private static int cnt = 0;
 
+
     public boardState()
     {
         board = new String[3][3];
@@ -295,13 +296,17 @@ class boardState {
         String CPUChar = " X ";
 
         System.out.println("Please enter the x (row) coordinate of your move.");
-        int xCoord = input.nextInt();
+        String xCoordinate = input.nextLine();
+        xCoordinate = xCoordinate.trim();
+        int xPoint = Integer.parseInt(xCoordinate);
         System.out.println("Now enter the y (column) coordinate of your move.");
-        int yCoord = input.nextInt();
+        String yCoordinate = input.nextLine();
+        yCoordinate = yCoordinate.trim();
+        int yPoint = Integer.parseInt(yCoordinate);
 
-        if (!(board[xCoord][yCoord].equals(userChar) || board[xCoord][yCoord].equals(CPUChar)))
+        if (!(board[xPoint][yPoint].equals(userChar) || board[xPoint][yPoint].equals(CPUChar)))
         {
-            board[xCoord][yCoord] = userChar;
+            board[xPoint][yPoint] = userChar;
             printBoard();
         }
         else
