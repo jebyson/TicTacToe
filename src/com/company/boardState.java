@@ -7,7 +7,6 @@ class boardState {
     private static Scanner input = new Scanner(System.in);
     private static boolean test = false;
 
-    private static String userChar = " O ";
     private static String CPUChar = " X ";
     private static String unchanged = " - ";
     private static int xSpot = -1;
@@ -15,14 +14,14 @@ class boardState {
     private static int cnt = 0;
 
 
-    public boardState() {
+    boardState() {
         board = new String[3][3];
         for (int i = 0; i < board.length; i++)
             for (int j = 0; j < board[0].length; j++)
                 board[i][j] = " - ";
     }
 
-    public static void CPUFirst() {
+    static void CPUFirst() {
         while(!test) {
             System.out.println("The top left of the board is (0, 0). The bottom right of the board is (2, 2)");
 
@@ -275,6 +274,7 @@ class boardState {
     }
 
     private static void blockWin() {
+        String userChar = " O ";
         if(board[0][0].equals(userChar) && board[0][1].equals(userChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
         else if(board[0][0].equals(userChar) && board[0][2].equals(userChar) && board[0][1].equals(unchanged))
