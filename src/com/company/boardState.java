@@ -15,26 +15,18 @@ class boardState {
     private static int cnt = 0;
 
 
-    public boardState()
-    {
+    public boardState() {
         board = new String[3][3];
         for (int i = 0; i < board.length; i++)
-        {
             for (int j = 0; j < board[0].length; j++)
-            {
                 board[i][j] = " - ";
-            }
-        }
     }
 
-    public static void CPUFirst()
-    {
-        while(!test)
-        {
+    public static void CPUFirst() {
+        while(!test) {
             System.out.println("The top left of the board is (0, 0). The bottom right of the board is (2, 2)");
 
-            if(board[0][0].equals(unchanged))
-            {
+            if(board[0][0].equals(unchanged)) {
                 xSpot = 0;
                 ySpot = 0;
                 winNow();
@@ -43,25 +35,20 @@ class boardState {
                 printBoard();
                 testWin();
                 if(test)
-                {
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[0][1].equals(unchanged))
-            {
+            else if(board[0][1].equals(unchanged)) {
                 xSpot = 0;
                 ySpot = 1;
                 winNow();
@@ -69,26 +56,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test)
-                {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[0][2].equals(unchanged))
-            {
+            else if(board[0][2].equals(unchanged)) {
                 xSpot = 0;
                 ySpot = 2;
                 winNow();
@@ -96,26 +78,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test)
-                {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[1][0].equals(unchanged))
-            {
+            else if(board[1][0].equals(unchanged)) {
                 xSpot = 1;
                 ySpot = 0;
                 winNow();
@@ -123,26 +100,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test)
-                {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[2][0].equals(unchanged))
-            {
+            else if(board[2][0].equals(unchanged)) {
                 xSpot = 2;
                 ySpot = 0;
                 winNow();
@@ -150,25 +122,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test) {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[1][1].equals(unchanged))
-            {
+            else if(board[1][1].equals(unchanged)) {
                 xSpot = 1;
                 ySpot = 1;
                 winNow();
@@ -176,26 +144,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test)
-                {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[2][1].equals(unchanged))
-            {
+            else if(board[2][1].equals(unchanged)) {
                 xSpot = 2;
                 ySpot = 1;
                 winNow();
@@ -203,26 +166,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test)
-                {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[1][2].equals(unchanged))
-            {
+            else if(board[1][2].equals(unchanged)) {
                 xSpot = 1;
                 ySpot = 2;
                 winNow();
@@ -230,26 +188,21 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test)
-                {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
             }
-            else if (board[2][2].equals(unchanged))
-            {
+            else if(board[2][2].equals(unchanged)) {
                 xSpot = 2;
                 ySpot = 2;
                 winNow();
@@ -257,19 +210,16 @@ class boardState {
 
                 printBoard();
                 testWin();
-                if (test) {
+                if(test)
                     break;
-                }
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
                 userMove();
                 checkTie();
-                if(cnt == 9)
-                {
+                if(cnt == 9) {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
@@ -278,41 +228,34 @@ class boardState {
         }
     }
 
-    public static void printBoard()
-    {
-        for (int i = 0; i < boardState.board.length; i++)
-        {
+    public static void printBoard() {
+        for (int i = 0; i < boardState.board.length; i++) {
             for (int j = 0; j < boardState.board.length; j++)
-            {
                 System.out.print(boardState.board[i][j]);
-            }
             System.out.println();
         }
     }
 
-    private static void userMove()
-    {
+    private static void userMove() {
         String userChar = " O ";
         String CPUChar = " X ";
 
         System.out.println("Please enter the x (row) coordinate of your move.");
         String xCoordinate = input.nextLine();
-        xCoordinate = xCoordinate.trim();
         int xPoint = Integer.parseInt(xCoordinate);
         System.out.println("Now enter the y (column) coordinate of your move.");
         String yCoordinate = input.nextLine();
         yCoordinate = yCoordinate.trim();
         int yPoint = Integer.parseInt(yCoordinate);
 
-        if (!(board[xPoint][yPoint].equals(userChar) || board[xPoint][yPoint].equals(CPUChar)))
-        {
+        if(xPoint < 0 || xPoint > 2 || yPoint < 0 || yPoint > 2)
+            System.out.println("Invalid move. The CPU receives a free move now!");
+        else if (!(board[xPoint][yPoint].equals(userChar) || board[xPoint][yPoint].equals(CPUChar))) {
             board[xPoint][yPoint] = userChar;
             printBoard();
         }
         else
-        {
             System.out.println("Invalid move. The CPU receives a free move now!");
-        }
     }
 
     private static void testWin() {
@@ -331,287 +274,117 @@ class boardState {
         }
     }
 
-    private static void blockWin()
-    {
-        boolean aaa = board[0][0].equals(userChar) && board[0][1].equals(userChar) && board[0][2].equals(unchanged);//1a
-        boolean bbb = board[0][0].equals(userChar) && board[0][2].equals(userChar) && board[0][1].equals(unchanged);//2b
-        boolean ccc = board[0][1].equals(userChar) && board[0][2].equals(userChar) && board[0][0].equals(unchanged);//3c
-
-        boolean ddd = board[1][0].equals(userChar) && board[1][1].equals(userChar) && board[1][2].equals(unchanged);//4d
-        boolean eee = board[1][0].equals(userChar) && board[1][2].equals(userChar) && board[1][1].equals(unchanged);//5e
-        boolean fff = board[1][1].equals(userChar) && board[1][2].equals(userChar) && board[1][0].equals(unchanged);//6f
-
-        boolean ggg = board[2][0].equals(userChar) && board[2][1].equals(userChar) && board[2][2].equals(unchanged);//7g
-        boolean hhh = board[2][0].equals(userChar) && board[2][2].equals(userChar) && board[2][1].equals(unchanged);//8h
-        boolean iii = board[2][1].equals(userChar) && board[2][2].equals(userChar) && board[2][0].equals(unchanged);//9i
-
-        boolean jjj = board[0][0].equals(userChar) && board[1][0].equals(userChar) && board[2][0].equals(unchanged);//10j
-        boolean kkk = board[0][0].equals(userChar) && board[2][0].equals(userChar) && board[1][0].equals(unchanged);//11k
-        boolean lll = board[1][0].equals(userChar) && board[2][0].equals(userChar) && board[0][0].equals(unchanged);//12l
-
-        boolean mmm = board[0][1].equals(userChar) && board[1][1].equals(userChar) && board[2][1].equals(unchanged);//13m
-        boolean nnn = board[0][1].equals(userChar) && board[2][1].equals(userChar) && board[1][1].equals(unchanged);//14n
-        boolean ooo = board[1][1].equals(userChar) && board[2][1].equals(userChar) && board[0][1].equals(unchanged);//15o
-
-        boolean ppp = board[0][2].equals(userChar) && board[1][2].equals(userChar) && board[2][2].equals(unchanged);//16p
-        boolean qqq = board[0][2].equals(userChar) && board[2][2].equals(userChar) && board[1][2].equals(unchanged);//17q
-        boolean rrr = board[1][2].equals(userChar) && board[2][2].equals(userChar) && board[0][2].equals(unchanged);//18r
-
-        boolean sss = board[0][0].equals(userChar) && board[1][1].equals(userChar) && board[2][2].equals(unchanged);//19
-        boolean ttt = board[0][0].equals(userChar) && board[2][2].equals(userChar) && board[1][1].equals(unchanged);//20
-        boolean uuu = board[1][1].equals(userChar) && board[2][2].equals(userChar) && board[0][0].equals(unchanged);//21
-
-        boolean vvv = board[2][0].equals(userChar) && board[1][1].equals(userChar) && board[0][2].equals(unchanged);//22
-        boolean www = board[2][0].equals(userChar) && board[0][2].equals(userChar) && board[1][1].equals(unchanged);//23
-        boolean xxx = board[1][1].equals(userChar) && board[0][2].equals(userChar) && board[2][0].equals(unchanged);//24
-
-        if(aaa)
-        {
+    private static void blockWin() {
+        if(board[0][0].equals(userChar) && board[0][1].equals(userChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
-        }
-        else if(bbb)
-        {
+        else if(board[0][0].equals(userChar) && board[0][2].equals(userChar) && board[0][1].equals(unchanged))
             board[0][1] = CPUChar;
-        }
-        else if(ccc)
-        {
+        else if(board[0][1].equals(userChar) && board[0][2].equals(userChar) && board[0][0].equals(unchanged))
             board[0][0] = CPUChar;
-        }
-        else if(ddd)
-        {
+        else if(board[1][0].equals(userChar) && board[1][1].equals(userChar) && board[1][2].equals(unchanged))
             board[1][2] = CPUChar;
-        }
-        else if(eee)
-        {
+        else if(board[1][0].equals(userChar) && board[1][2].equals(userChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(fff)
-        {
+        else if(board[1][1].equals(userChar) && board[1][2].equals(userChar) && board[1][0].equals(unchanged))
             board[1][0] = CPUChar;
-        }
-        else if(ggg)
-        {
+        else if(board[2][0].equals(userChar) && board[2][1].equals(userChar) && board[2][2].equals(unchanged))
             board[2][2] = CPUChar;
-        }
-        else if(hhh)
-        {
+        else if(board[2][0].equals(userChar) && board[2][2].equals(userChar) && board[2][1].equals(unchanged))
             board[2][1] = CPUChar;
-        }
-        else if(iii)
-        {
+        else if(board[2][1].equals(userChar) && board[2][2].equals(userChar) && board[2][0].equals(unchanged))
             board[2][0] = CPUChar;
-        }
-        else if(jjj)
-        {
+        else if(board[0][0].equals(userChar) && board[1][0].equals(userChar) && board[2][0].equals(unchanged))
             board[2][0] = CPUChar;
-        }
-        else if(kkk)
-        {
+        else if(board[0][0].equals(userChar) && board[2][0].equals(userChar) && board[1][0].equals(unchanged))
             board[1][0] = CPUChar;
-        }
-        else if(lll)
-        {
+        else if(board[1][0].equals(userChar) && board[2][0].equals(userChar) && board[0][0].equals(unchanged))
             board[0][0] = CPUChar;
-        }
-        else if(mmm)
-        {
+        else if(board[0][1].equals(userChar) && board[1][1].equals(userChar) && board[2][1].equals(unchanged))
             board[2][1] = CPUChar;
-        }
-        else if(nnn)
-        {
+        else if(board[0][1].equals(userChar) && board[2][1].equals(userChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(ooo)
-        {
+        else if(board[1][1].equals(userChar) && board[2][1].equals(userChar) && board[0][1].equals(unchanged))
             board[0][1] = CPUChar;
-        }
-        else if(ppp)
-        {
+        else if(board[0][2].equals(userChar) && board[1][2].equals(userChar) && board[2][2].equals(unchanged))
             board[2][2] = CPUChar;
-        }
-        else if(qqq)
-        {
+        else if(board[0][2].equals(userChar) && board[2][2].equals(userChar) && board[1][2].equals(unchanged))
             board[1][2] = CPUChar;
-        }
-        else if(rrr)
-        {
+        else if(board[1][2].equals(userChar) && board[2][2].equals(userChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
-        }
-        else if(sss)
-        {
+        else if(board[0][0].equals(userChar) && board[1][1].equals(userChar) && board[2][2].equals(unchanged))
             board[2][2] = CPUChar;
-        }
-        else if(ttt)
-        {
+        else if(board[0][0].equals(userChar) && board[2][2].equals(userChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(uuu)
-        {
+        else if(board[1][1].equals(userChar) && board[2][2].equals(userChar) && board[0][0].equals(unchanged))
             board[0][0] = CPUChar;
-        }
-        else if(vvv)
-        {
+        else if(board[2][0].equals(userChar) && board[1][1].equals(userChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
-        }
-        else if(www)
-        {
+        else if(board[2][0].equals(userChar) && board[0][2].equals(userChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(xxx)
-        {
+        else if(board[1][1].equals(userChar) && board[0][2].equals(userChar) && board[2][0].equals(unchanged))
             board[2][0] = CPUChar;
-        }
         else
-        {
             board[xSpot][ySpot] = CPUChar;
-        }
     }
 
-    private static void checkTie()
-    {
+    private static void checkTie() {
         cnt = 0;
-        for (String[] dummyVar : board) {
-            for (int b = 0; b < board[0].length; b++) {
-                if (!(dummyVar[b].equals(unchanged))) {
+        for (String[] dummyVar : board)
+            for (int b = 0; b < board[0].length; b++)
+                if (!(dummyVar[b].equals(unchanged)))
                     cnt++;
-                }
-            }
-        }
     }
 
-    private static void winNow()
-    {
-        boolean aaa = board[0][0].equals(CPUChar) && board[0][1].equals(CPUChar) && board[0][2].equals(unchanged);//1a
-        boolean bbb = board[0][0].equals(CPUChar) && board[0][2].equals(CPUChar) && board[0][1].equals(unchanged);//2b
-        boolean ccc = board[0][1].equals(CPUChar) && board[0][2].equals(CPUChar) && board[0][0].equals(unchanged);//3c
-
-        boolean ddd = board[1][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[1][2].equals(unchanged);//4d
-        boolean eee = board[1][0].equals(CPUChar) && board[1][2].equals(CPUChar) && board[1][1].equals(unchanged);//5e
-        boolean fff = board[1][1].equals(CPUChar) && board[1][2].equals(CPUChar) && board[1][0].equals(unchanged);//6f
-
-        boolean ggg = board[2][0].equals(CPUChar) && board[2][1].equals(CPUChar) && board[2][2].equals(unchanged);//7g
-        boolean hhh = board[2][0].equals(CPUChar) && board[2][2].equals(CPUChar) && board[2][1].equals(unchanged);//8h
-        boolean iii = board[2][1].equals(CPUChar) && board[2][2].equals(CPUChar) && board[2][0].equals(unchanged);//9i
-
-        boolean jjj = board[0][0].equals(CPUChar) && board[1][0].equals(CPUChar) && board[2][0].equals(unchanged);//10j
-        boolean kkk = board[0][0].equals(CPUChar) && board[2][0].equals(CPUChar) && board[1][0].equals(unchanged);//11k
-        boolean lll = board[1][0].equals(CPUChar) && board[2][0].equals(CPUChar) && board[0][0].equals(unchanged);//12l
-
-        boolean mmm = board[0][1].equals(CPUChar) && board[1][1].equals(CPUChar) && board[2][1].equals(unchanged);//13m
-        boolean nnn = board[0][1].equals(CPUChar) && board[2][1].equals(CPUChar) && board[1][1].equals(unchanged);//14n
-        boolean ooo = board[1][1].equals(CPUChar) && board[2][1].equals(CPUChar) && board[0][1].equals(unchanged);//15o
-
-        boolean ppp = board[0][2].equals(CPUChar) && board[1][2].equals(CPUChar) && board[2][2].equals(unchanged);//16p
-        boolean qqq = board[0][2].equals(CPUChar) && board[2][2].equals(CPUChar) && board[1][2].equals(unchanged);//17q
-        boolean rrr = board[1][2].equals(CPUChar) && board[2][2].equals(CPUChar) && board[0][2].equals(unchanged);//18r
-
-        boolean sss = board[0][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[2][2].equals(unchanged);//19
-        boolean ttt = board[0][0].equals(CPUChar) && board[2][2].equals(CPUChar) && board[1][1].equals(unchanged);//20
-        boolean uuu = board[1][1].equals(CPUChar) && board[2][2].equals(CPUChar) && board[0][0].equals(unchanged);//21
-
-        boolean vvv = board[2][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[0][2].equals(unchanged);//22
-        boolean www = board[2][0].equals(CPUChar) && board[0][2].equals(CPUChar) && board[1][1].equals(unchanged);//23
-        boolean xxx = board[1][1].equals(CPUChar) && board[0][2].equals(CPUChar) && board[2][0].equals(unchanged);//24
-
-        if(aaa)
-        {
+    private static void winNow() {
+        if(board[0][0].equals(CPUChar) && board[0][1].equals(CPUChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
-        }
-        else if(bbb)
-        {
+        else if(board[0][0].equals(CPUChar) && board[0][2].equals(CPUChar) && board[0][1].equals(unchanged))
             board[0][1] = CPUChar;
-        }
-        else if(ccc)
-        {
+        else if(board[0][1].equals(CPUChar) && board[0][2].equals(CPUChar) && board[0][0].equals(unchanged))
             board[0][0] = CPUChar;
-        }
-        else if(ddd)
-        {
+        else if(board[1][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[1][2].equals(unchanged))
             board[1][2] = CPUChar;
-        }
-        else if(eee)
-        {
+        else if(board[1][0].equals(CPUChar) && board[1][2].equals(CPUChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(fff)
-        {
+        else if(board[1][1].equals(CPUChar) && board[1][2].equals(CPUChar) && board[1][0].equals(unchanged))
             board[1][0] = CPUChar;
-        }
-        else if(ggg)
-        {
+        else if(board[2][0].equals(CPUChar) && board[2][1].equals(CPUChar) && board[2][2].equals(unchanged))
             board[2][2] = CPUChar;
-        }
-        else if(hhh)
-        {
+        else if(board[2][0].equals(CPUChar) && board[2][2].equals(CPUChar) && board[2][1].equals(unchanged))
             board[2][1] = CPUChar;
-        }
-        else if(iii)
-        {
+        else if(board[2][1].equals(CPUChar) && board[2][2].equals(CPUChar) && board[2][0].equals(unchanged))
             board[2][0] = CPUChar;
-        }
-        else if(jjj)
-        {
+        else if(board[0][0].equals(CPUChar) && board[1][0].equals(CPUChar) && board[2][0].equals(unchanged))
             board[2][0] = CPUChar;
-        }
-        else if(kkk)
-        {
+        else if(board[0][0].equals(CPUChar) && board[2][0].equals(CPUChar) && board[1][0].equals(unchanged))
             board[1][0] = CPUChar;
-        }
-        else if(lll)
-        {
+        else if(board[1][0].equals(CPUChar) && board[2][0].equals(CPUChar) && board[0][0].equals(unchanged))
             board[0][0] = CPUChar;
-        }
-        else if(mmm)
-        {
+        else if(board[0][1].equals(CPUChar) && board[1][1].equals(CPUChar) && board[2][1].equals(unchanged))
             board[2][1] = CPUChar;
-        }
-        else if(nnn)
-        {
+        else if(board[0][1].equals(CPUChar) && board[2][1].equals(CPUChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(ooo)
-        {
+        else if(board[1][1].equals(CPUChar) && board[2][1].equals(CPUChar) && board[0][1].equals(unchanged))
             board[0][1] = CPUChar;
-        }
-        else if(ppp)
-        {
+        else if(board[0][2].equals(CPUChar) && board[1][2].equals(CPUChar) && board[2][2].equals(unchanged))
             board[2][2] = CPUChar;
-        }
-        else if(qqq)
-        {
+        else if(board[0][2].equals(CPUChar) && board[2][2].equals(CPUChar) && board[1][2].equals(unchanged))
             board[1][2] = CPUChar;
-        }
-        else if(rrr)
-        {
+        else if(board[1][2].equals(CPUChar) && board[2][2].equals(CPUChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
-        }
-        else if(sss)
-        {
+        else if(board[0][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[2][2].equals(unchanged))
             board[2][2] = CPUChar;
-        }
-        else if(ttt)
-        {
+        else if(board[0][0].equals(CPUChar) && board[2][2].equals(CPUChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(uuu)
-        {
+        else if(board[1][1].equals(CPUChar) && board[2][2].equals(CPUChar) && board[0][0].equals(unchanged))
             board[0][0] = CPUChar;
-        }
-        else if(vvv)
-        {
+        else if(board[2][0].equals(CPUChar) && board[1][1].equals(CPUChar) && board[0][2].equals(unchanged))
             board[0][2] = CPUChar;
-        }
-        else if(www)
-        {
+        else if(board[2][0].equals(CPUChar) && board[0][2].equals(CPUChar) && board[1][1].equals(unchanged))
             board[1][1] = CPUChar;
-        }
-        else if(xxx)
-        {
+        else if(board[1][1].equals(CPUChar) && board[0][2].equals(CPUChar) && board[2][0].equals(unchanged))
             board[2][0] = CPUChar;
-        }
         else
-        {
             blockWin();
-        }
     }
 }
