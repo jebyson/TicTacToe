@@ -216,7 +216,7 @@ class boardState {
         String yCoordinate = input.nextLine(); yCoordinate = yCoordinate.trim();
         int yPoint = Integer.parseInt(yCoordinate);
 
-        if(xPoint < 0 || xPoint > 2 || yPoint < 0 || yPoint > 2 || )
+        if(xPoint < 0 || xPoint > 2 || yPoint < 0 || yPoint > 2)
             System.out.println("Invalid move. The CPU receives a free move now!");
         else if (!(board[xPoint][yPoint].equals(userChar) || board[xPoint][yPoint].equals(CPUChar))) {
             board[xPoint][yPoint] = userChar;
