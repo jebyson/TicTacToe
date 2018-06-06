@@ -28,7 +28,8 @@ class boardState {
             if(board[0][0].equals(unchanged)) {
                 xSpot = 0; ySpot = 0;
                 winNow();
-                printBoard(); testWin();
+                printBoard();
+                testWin();
 
                 if(test)
                     break;
@@ -37,13 +38,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[0][1].equals(unchanged)) {
                 xSpot = 0; ySpot = 1;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -51,13 +54,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[0][2].equals(unchanged)) {
                 xSpot = 0; ySpot = 2;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -65,13 +70,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[1][0].equals(unchanged)) {
                 xSpot = 1; ySpot = 0;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -79,13 +86,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[2][0].equals(unchanged)) {
                 xSpot = 2; ySpot = 0;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -93,13 +102,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[1][1].equals(unchanged)) {
                 xSpot = 1; ySpot = 1;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -107,13 +118,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[2][1].equals(unchanged)) {
                 xSpot = 2; ySpot = 1;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -121,13 +134,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[1][2].equals(unchanged)) {
                 xSpot = 1; ySpot = 2;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -135,13 +150,15 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
             }
             else if(board[2][2].equals(unchanged)) {
                 xSpot = 2; ySpot = 2;
                 winNow();
-
-                printBoard(); testWin();
+                printBoard();
+                testWin();
+                
                 if(test)
                     break;
                 checkTie();
@@ -149,7 +166,8 @@ class boardState {
                     System.out.println("The game has ended in a tie! Thanks for playing!");
                     break;
                 }
-                userMove(); checkTie();
+                userMove();
+                checkTie();
                 }
 
             if(cnt == 9)
